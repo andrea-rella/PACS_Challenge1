@@ -1,0 +1,25 @@
+{
+  "initial": [0, 0],
+  "tol_s": 1e-6,
+  "tol_r": 1e-6,
+  "max_it": 700,
+  "sigma": 0.3,
+  "alpha0": 0.1,
+
+  "fun": "x1 * x2 + 4 * x1^4 + x2^2 + 3 * x1",
+  "grad": ["x2 + 16 * x1^3 +3", "x1 + 2 * x2"],
+
+  "decayParameter": 0.2,
+  "alphaMethod": 0,
+
+  "algorithm": 1,
+
+  "FiniteDifferences": 1,
+  "hFD": 1e-4,
+
+  "gamma1": 0.9,
+  "gamma2": 0.999,
+  "epsilon": 1e-8,
+
+  "eta": 0.9
+}
