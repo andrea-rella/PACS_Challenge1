@@ -1,4 +1,4 @@
-# Implementation Minimisation Algorithmsin C++
+# Implementation Of Minimisation Algorithms in C++
 
 This project implements various minimization algorithms in C++, including Gradient Descent, [Heavy Ball](https://arxiv.org/pdf/1412.7457.pdf), [Nesterov](https://arxiv.org/pdf/1607.01981.pdf), and [Adam](https://arxiv.org/pdf/1412.6980.pdf). These algorithms are fundamental in optimization and find applications in various fields such as machine learning, physics, and engineering. The implementation allows users to minimize scalar functions of multiple variables efficiently.
 
@@ -64,7 +64,7 @@ These parameters allow users to customize the optimization process according to 
 
 ## Usage
 
-- Clone the repository with ```git clone https://github.com/andrea-rella/PACS_challenge1_Minimization.git```.
+- Clone the repository with `git clone https://github.com/andrea-rella/PACS_challenge1_Minimization.git`.
 - Modify the paths in the make file to match personal /include and /lib directories. If you are a student following the PACS course of Professor Formaggia you should find
 - Build the project using the provided Makefile
 - Ensure that `LD_LIBRARY_PATH` environment variable is stored the path of the folder where the muparser $\texttt{.so}$ files reside.
