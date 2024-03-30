@@ -1,4 +1,6 @@
 #folder with include and lib directories for json and muparserX
+#@note if you  add export PACS_ROOT=/path/to/your/libs in your .bashrc file, 
+#you can use the following line
 LIBS_ROOT = $(PACS_ROOT)
 
 CXX      ?= g++

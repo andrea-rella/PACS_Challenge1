@@ -52,6 +52,12 @@ std::vector<double> GradientDescent(const Data &data)
     }
     else
     {
+        //@note: in general you want the function don't waste time in printing the result
+        //This is done only for debugging purposes. Maybe you can enclose this part into 
+        //a macro that is defined only in debug mode:
+        // #ifdef DEBUG
+        // std::cout << "\nGradient Descent converged to " << printVector(x) << " in  " << k << " iterations" << std::endl;
+        // #endif
         std::cout << "\nGradient Descent converged to " << printVector(x) << " in  " << k << " iterations" << std::endl;
     }
 
@@ -198,6 +204,9 @@ std::vector<double> Adam(const Data &data)
 
 std::vector<double> minimize(const Data &d)
 {
+    //@note: This is fine. An alternative, more elegant way to implement this would be to use a map
+    //to store a function wrapper to the minimization algorithms. This way you can avoid the switch
+    //statement and the code is more readable and extensible. However, this is a good solution as well.
     switch (d.algorithm)
     {
     case 0:
