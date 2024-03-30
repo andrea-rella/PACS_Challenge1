@@ -1,7 +1,8 @@
 #folder with include and lib directories for json and muparserX
-LIBS_ROOT = ../../pacs-examples/Examples
+LIBS_ROOT = $(PACS_ROOT)
 
 CXX      ?= g++
+
 CXXFLAGS ?= -std=c++20
 CPPFLAGS ?= -O3 -Wall -Wno-conversion-null -Wno-deprecated-declarations -I${LIBS_ROOT}/include 
 LDFLAGS ?= -L${LIBS_ROOT}/lib
