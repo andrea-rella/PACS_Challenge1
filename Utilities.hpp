@@ -35,6 +35,8 @@ std::vector<double> gradientFD(const std::function<double(const std::vector<doub
 
     for (size_t i = 0; i < x.size(); ++i)
     {
+        //@note the only way to avoid having to create these temporary vectors
+        //is to use a view. Yet, it is a bit complicated for just an exercise!
         std::vector<double> x_plus_h = x; // Copy x to avoid modifying the original vector
         std::vector<double> x_minus_h = x;
 
@@ -103,6 +105,11 @@ double armijo(const std::vector<double> &xk, const std::function<double(const st
 {
     double ak = a0;
 
+    //@note I would add a maximum number of iterations. In principle
+    // Armijo sould converge provided f is continuous and df is Lipschitz
+    // continuous. Yet, in practice, it may not converge due to numerical
+    // errors. In that case, we should stop the loop and return the best
+    // value found so far.
     while (f(xk) - f(xk - a0 * df(xk)) >= sigma * a0 * pow(norm2(df(xk)), 2))
     {
         ak /= 2.;
@@ -116,6 +123,7 @@ double armijo(const std::vector<double> &xk, const std::function<double(const st
 std::string printVector(const std::vector<double> &vec)
 {
     std::stringstream ss;
+    //@note Nice the idea of using stringstreams!
     ss << "(";
     for (size_t i = 0; i < vec.size(); ++i)
     {
